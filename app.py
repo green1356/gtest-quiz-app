@@ -298,8 +298,8 @@ h1 {
 =============================== */
 @media (max-width: 600px) {
     .title-tape {
-        font-size: 20px !important;      /* 少し小さく */
-        letter-spacing: 0.15em !important; /* 文字間をかなり狭く */
+        font-size: 18px !important;      /* 少し小さく */
+        letter-spacing: 0.1em !important; /* 文字間をかなり狭く */
         padding: 10px 20px !important;   /* 横幅も少し詰める */
         white-space: nowrap !important;  /* 行を折り返さない指定 */
     }
