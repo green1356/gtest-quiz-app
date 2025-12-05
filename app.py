@@ -514,7 +514,9 @@ def generate_question():
         except Exception as e:
             st.error(f"エラー: {e}")
             st.warning("モデル名を変更して再試行してください。")
-
+# ★ここを追加
+            st.session_state.quiz_data = None
+            return
 
 # --- 8. タブ（5つ） ---
 tab_quiz, tab_score, tab_notes, tab_progress, tab_list = st.tabs(
@@ -567,12 +569,21 @@ with tab_quiz:
     else:
         st.caption("現在：通常モード（1問ずつ練習）")
 
-    # ここで自動的に最初の問題を作成（ボタンなし）
+        # ここで自動的に最初の問題を作成（ボタンなし）
     if st.session_state.quiz_data is None:
         generate_question()
 
     q_data = st.session_state.quiz_data
 
+    # ★ここから追加：問題生成に失敗した場合の安全策
+    if not q_data:
+        st.error("問題の生成に失敗しました。もう一度お試しください。")
+        if st.button("🔁 もう一度問題を作成する"):
+            st.session_state.quiz_data = None
+            generate_question()
+            st.rerun()
+        st.stop()
+    # ★ここまで追加
     # テーマタグ
     st.markdown(
         f'<div class="sub-topic-tag">テーマ：{st.session_state.current_sub_topic}</div>',
