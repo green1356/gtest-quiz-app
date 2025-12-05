@@ -220,7 +220,7 @@ button[kind="secondary"], button[kind="primary"] {
     padding: 10px 22px;              /* 少しコンパクトに */
     background-color: #a69485;
     color: #ffffff;
-    font-size: 24px;                 /* わずかに縮小 */
+    font-size: 28px;                 /* わずかに縮小 */
     font-weight: 700;
     letter-spacing: 0.25em;          /* ★ 0.55em → 0.18em 程度に縮小 */
     white-space: nowrap;             /* ★ 途中で改行させない */
@@ -303,6 +303,12 @@ h1 {
         letter-spacing: 0.1em !important; /* 文字間をかなり狭く */
         padding: 10px 20px !important;   /* 横幅も少し詰める */
         white-space: nowrap !important;  /* 行を折り返さない指定 */
+/* PC（幅 900px 以上）ではタイトルを大きくする */
+@media (min-width: 900px) {
+    .title-tape {
+        font-size: 32px !important;   /* PCで大きく */
+        padding: 16px 40px !important;
+        letter-spacing: 0.25em !important;  /* 少し広げる */
     }
 }
 
