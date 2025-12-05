@@ -235,9 +235,9 @@ button[kind="secondary"], button[kind="primary"] {
         padding: 6px 20px;
         letter-spacing: 0.20em;
 
-        margin-left: 24px;     /* ← 左右に余白を作る */
-        margin-right: 24px;    /* ← 左右に余白を作る */
-        max-width: calc(100% - 24px);  /* 画面横にはみ出さない調整 */
+        margin-left: 20px;     /* ← 左右に余白を作る */
+        margin-right: 20px;    /* ← 左右に余白を作る */
+        max-width: calc(100% - 40px);  /* 画面横にはみ出さない調整 */
         box-sizing: border-box;
     }
 }
