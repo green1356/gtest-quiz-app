@@ -279,6 +279,22 @@ button[kind="secondary"], button[kind="primary"] {
 .stTabs [data-baseweb="tab-highlight"] {
     background: none !important;
 }
+/* ===============================
+   タイトルの改行禁止
+=============================== */
+h1 {
+    white-space: nowrap !important;
+}
+
+/* ===============================
+   スマホ幅でのタイトル調整
+=============================== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px !important;
+        white-space: nowrap !important;
+    }
+}
 </style>
 """
 st.markdown(custom_css, unsafe_allow_html=True)
