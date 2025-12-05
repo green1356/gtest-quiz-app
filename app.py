@@ -1,3 +1,41 @@
+import streamlit as st
+import toml
+
+# ---------------------
+# パスワード認証（ログイン）
+# ---------------------
+
+def check_password():
+    """パスワード認証。成功すれば True を返す"""
+
+    # Secrets に保存したパスワードを取得
+    secrets = st.secrets.get("auth", {})
+    correct_password = secrets.get("password")
+
+    # パスワード未設定の場合は認証スキップ
+    if not correct_password:
+        return True
+
+    # パスワード入力 UI
+    st.markdown("## 🔒 パスワードを入力してください")
+    password = st.text_input("Password", type="password")
+
+    # 入力チェック
+    if st.button("ログイン"):
+        if password == correct_password:
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("パスワードが違います")
+
+    return st.session_state.get("authenticated", False)
+
+
+# ---------------------
+# 認証チェック
+# ---------------------
+if not check_password():
+    st.stop()
 import os
 import streamlit as st
 import google.generativeai as genai
