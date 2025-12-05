@@ -314,37 +314,38 @@ h1 {
    スマホ幅でのタイトル調整
 =============================== */
 @media (max-width: 600px) {
+    section.main > div.block-container {
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .question-card,
+    .answer-card,
+    .explanation-box {
+        padding: 16px 18px;
+        font-size: 16px;
+    }
+
     h1 {
-        font-size: 20px !important;
-        white-space: nowrap !important;
- /* ===============================
-   スマホ表示時のタイトル調整
-=============================== */
-@media (max-width: 600px) {
-    .title-tape {
-        font-size: 18px !important;      /* 少し小さく */
-        letter-spacing: 0.1em !important; /* 文字間をかなり狭く */
-        padding: 10px 20px !important;   /* 横幅も少し詰める */
-        white-space: nowrap !important;  /* 行を折り返さない指定 */
-/* PC（幅 900px 以上）ではタイトルを大きくする */
-@media (min-width: 900px) {
-    .title-tape {
-        font-size: 40px !important;   /* PCで大きく */
-        padding: 16px 40px !important;
-        letter-spacing: 0.25em !important;  /* 少し広げる */
-/* --- タイトルの左右を広げてマステを長くする --- */
+        font-size: 22px;
+    }
 
-/* 共通（スマホ〜タブレット） */
-.title-tape {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-}
+    /* ▼ ここから追加：スマホ時、タイトルに左右余白をつける */
+    .title-center-wrapper {
+        padding: 0 16px;          /* 画面左右に16pxずつ余白 */
+        box-sizing: border-box;
+    }
 
-/* PC（幅900px以上）の場合はさらに広げる */
-@media (min-width: 900px) {
+    .title-tape-wrapper {
+        width: 100%;              /* 中身を横幅いっぱいに（中央寄せのまま） */
+    }
+
     .title-tape {
-        padding-left: 70px !important;
-        padding-right: 70px !important;
+        font-size: 18px;          /* スマホ用タイトルサイズ（お好みで調整可） */
+        padding: 8px 16px;        /* テープ内の余白 */
     }
 }
 
