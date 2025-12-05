@@ -160,6 +160,11 @@ button[kind="secondary"], button[kind="primary"] {
         padding-right: 12px !important;
         margin-top: 10px;
         margin-bottom: 10px;
+            /* スマホ時のタブ配置：左寄せ＋スクロール */
+    .stTabs [data-baseweb="tab-list"] {
+        justify-content: flex-start !important;  /* 中央寄せを解除 */
+        padding-left: 8px;
+        overflow-x: auto;
     }
 
     .question-card,
@@ -238,8 +243,10 @@ button[kind="secondary"], button[kind="primary"] {
     gap: 8px;
     border-bottom: none !important;
     display: flex;
-    justify-content: center;   /* タイトル下で中央寄せに配置 */
+    justify-content: center;   /* PCでは中央寄せ */
     align-items: flex-end;
+    flex-wrap: nowrap;
+    overflow-x: auto;          /* 幅が足りないときは横スクロール */
 }
 
 /* デフォルトのボタン装飾を消す */
