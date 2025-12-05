@@ -306,7 +306,7 @@ h1 {
 /* PC（幅 900px 以上）ではタイトルを大きくする */
 @media (min-width: 900px) {
     .title-tape {
-        font-size: 32px !important;   /* PCで大きく */
+        font-size: 40px !important;   /* PCで大きく */
         padding: 16px 40px !important;
         letter-spacing: 0.25em !important;  /* 少し広げる */
     }
