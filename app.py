@@ -235,8 +235,8 @@ button[kind="secondary"], button[kind="primary"] {
         padding: 6px 20px;
         letter-spacing: 0.20em;
 
-        margin-left: 12px;     /* ← 左右に余白を作る */
-        margin-right: 12px;    /* ← 左右に余白を作る */
+        margin-left: 24px;     /* ← 左右に余白を作る */
+        margin-right: 24px;    /* ← 左右に余白を作る */
         max-width: calc(100% - 24px);  /* 画面横にはみ出さない調整 */
         box-sizing: border-box;
     }
