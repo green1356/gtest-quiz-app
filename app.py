@@ -217,12 +217,13 @@ button[kind="secondary"], button[kind="primary"] {
     position: relative;
     z-index: 1;
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 22px;              /* 少しコンパクトに */
     background-color: #a69485;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 24px;                 /* わずかに縮小 */
     font-weight: 700;
-    letter-spacing: 0.55em;
+    letter-spacing: 0.18em;          /* ★ 0.55em → 0.18em 程度に縮小 */
+    white-space: nowrap;             /* ★ 途中で改行させない */
     clip-path: polygon(0% 0%, 100% 0%, 95% 50%, 100% 100%, 0% 100%, 5% 50%);
     border-radius: 10px;
 }
