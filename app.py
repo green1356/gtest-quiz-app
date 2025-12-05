@@ -333,21 +333,24 @@ h1 {
         font-size: 22px;
     }
 
-    /* ▼ ここから追加：スマホ時、タイトルに左右余白をつける */
+        /* スマホ縦表示でタイトルテープの横幅と余白を広げる */
     .title-center-wrapper {
-        padding: 0 16px;          /* 画面左右に16pxずつ余白 */
-        box-sizing: border-box;
+        margin-top: 18px;
+        margin-bottom: 14px;
     }
 
     .title-tape-wrapper {
-        width: 100%;              /* 中身を横幅いっぱいに（中央寄せのまま） */
+        display: block;
+        padding: 0 24px;       /* 画面左右との余白（外側のスペース） */
     }
 
     .title-tape {
-        font-size: 18px;          /* スマホ用タイトルサイズ（お好みで調整可） */
-        padding: 8px 16px;        /* テープ内の余白 */
+        display: block;
+        width: 100%;           /* スマホ幅いっぱいを使う */
+        box-sizing: border-box;
+        padding: 10px 32px;    /* テープ内の左右余白（背景部分を広げる） */
+        text-align: center;
     }
-}
 
 </style>
 """
